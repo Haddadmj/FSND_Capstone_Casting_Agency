@@ -44,7 +44,7 @@ class CapstoneTest(unittest.TestCase):
         """Executed after reach test"""
         pass
 
-################## Successful Tests ##################
+# Successful Tests
 
     def test_get_actors(self):
         res = self.client().get('/actors', headers=Assistant)
@@ -112,7 +112,7 @@ class CapstoneTest(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['deleted_id'], 1)
 
-################## Unsuccessful Tests ##################
+# Unsuccessful Tests
 
     def test_u_get_actors(self):
         res = self.client().get('/actors')

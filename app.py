@@ -84,9 +84,9 @@ def create_app():
         if not name and not age and not gender:
             abort(422)
 
-        actor.name = name if name is not None else actor.name
-        actor.age = age if age is not None else actor.age
-        actor.gender = gender if gender is not None else actor.gender
+        actor.name = name or actor.name
+        actor.age = age or actor.age
+        actor.gender = gender or actor.gender
         actor.update()
 
         return jsonify({
@@ -161,8 +161,8 @@ def create_app():
         if not title and not release_date:
             abort(422)
 
-        movie.title = title if title is not None else movie.title
-        movie.release_date = release_date if release_date is not None else movie.release_date
+        movie.title = title or movie.title
+        movie.release_date = release_date or movie.release_date
         movie.update()
 
         return jsonify({
