@@ -10,6 +10,16 @@ Application hosted on Heroku
 
 https://vast-stream-21858.herokuapp.com/
 
+# Motivation
+
+This project to show my learning journey during this nanodegree
+
+1.  Database with  **postgres**  and  **sqlalchemy**  (`models.py`)
+2.  API  with  **Flask**  (`app.py`)
+3.  TDD  **Unittest**  (`test_app.py`)
+4.  Authorization &  Authentification **Auth0**  (`auth.py`)
+5.  Deployment on  **`Heroku`**
+
 ## Working with the application locally
 Make sure you have [python 3](https://www.python.org/downloads/) or later installed
 
@@ -45,8 +55,14 @@ Make sure you have [python 3](https://www.python.org/downloads/) or later instal
 
 7. **Run the Flask Application locally**:
     ```bash
-    export FLASK_APP=app
+    export FLASK_APP=app.py
     export FLASK_ENV=development
+    flask run
+
+    # if using CMD in Windows
+
+    set FLASK_APP=app.py
+    set FLASK_ENV=development
     flask run
     ```
 
@@ -94,6 +110,9 @@ The API will return three types of errors:
 * 404 – resource not found
 * 422 – unprocessable
 * 401 - Unauthorized
+* 400 - bad request
+* 500 - internal server error
+* 403 - Forbidden
 
 ### Endpoints
 
@@ -218,7 +237,7 @@ The API will return three types of errors:
             "success": true
         }
 
-#### Postman user
+# Postman user
 in this repo there is collection file exported with latest postman version
 
 you can use it to test all API Provided in here

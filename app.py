@@ -177,7 +177,7 @@ def create_app():
         return jsonify({
             "success": False,
             "error": 422,
-            "message": "unprocessable"
+            "message": "Unprocessable"
         }), 422
 
     @app.errorhandler(404)
@@ -193,6 +193,22 @@ def create_app():
         response = jsonify(e.error)
         response.status_code = e.status_code
         return response
+
+    @app.errorhandler(500)
+    def internal_error(error):
+        return jsonify({
+            "success": False,
+            "error": 500,
+            "message": "internal server error"
+        }), 500
+
+    @app.errorhandler(400)
+    def bad_request(error):
+        return jsonify({
+            "success": False,
+            "error": 400,
+            "message": "bad request"
+        }), 400
 
     return app
 
