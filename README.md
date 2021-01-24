@@ -70,8 +70,14 @@ python test_app.py # if running locally
 Users in this application are:
 
 * Assistant : Can view actors and movies
+    * Email: AssistantTest@gmail.com
+    * Password: Test1234
 * Director : Assistant Access + CURD on actors + Modify movies
+    * Email: DirectorTest@gmail.com
+    * Password: Test1234
 * Executive: Full Access
+    * Email: ExecutiveTest@gmail.com
+    * Password: Test1234
 
 ### Error Handling
 
