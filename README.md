@@ -210,7 +210,7 @@ The API will return three types of errors:
 #### DELETE /movies/<movie_id>
 
 * General: Delete movie given id in URL
-* Sample: `curl -X DELETE 'vast-stream-21858.herokuapp.com/actors/2' \
+* Sample: `curl -X DELETE 'vast-stream-21858.herokuapp.com/movies/2' \
 -H 'Authorization: Bearer Executive_Token'`
 
         {
